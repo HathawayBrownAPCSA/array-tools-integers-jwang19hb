@@ -101,19 +101,66 @@ public class IntegerArrayTools
     return sum;
   }
   
-  
+ /** Get the largest value in an integer array
+   * @return the maximum value of the integer array 
+   **/
+  public int getMax() {
+   int max = arrayData[0];
+   for (int i = 0; i < MAX_NUMS; i++) {
+    if (arrayData[i] > max)
+     max = arrayData[i];
+   }
+   return max;
+  }
+ /** Get the index of the largest element of the integer array
+   *@return the index of the maximum value of the integer array
+   **/
+  public int getMaxIndex() {
+    int max = arrayData[0];
+    int index = 0;
+   for (int i = 0; i < MAX_NUMS; i++) {
+    if (arrayData[i] > max)
+     max = arrayData[i];
+     index = i;
+  }
+   return index;
+  }
+ /** Get the smallest value in an integer array
+   * @return the minimum value of the integer array 
+   **/
+  public int getMin() {
+   int min = arrayData[0];
+   for (int i = 0; i < MAX_NUMS; i++) {
+    if (arrayData[i] < min)
+     min = arrayData[i];
+   }
+   return min;
+  }
+ /** Get the index of the smallest element of the integer array
+   *@return the index of the minimum value of the integer array
+   **/
+  public int getMinIndex() {
+    int min = arrayData[0];
+    int index = 0;
+   for (int i = 0; i < MAX_NUMS; i++) {
+    if (arrayData[i] < min)
+     min = arrayData[i];
+     index = i;
+  }
+   return index;
+  }
   /** Tests the various array tools */
   public static void main (String[] args)
   {
     IntegerArrayTools myArray = new IntegerArrayTools();
-    //myArray.fillRandom(100, 12);
-    myArray.fillKeyboard ();
+    myArray.fillRandom(100, 12);
+    //myArray.fillKeyboard ();
     myArray.printArray ();
     System.out.println ("There are " + myArray.getCount() + " integers in the array.");
     System.out.println ("The sum is " + myArray.sumArray());
     
     // Un-comment these lines one at a time after you have written the appropriate code
-//    System.out.println ("The largest item is " + myArray.getMax() ); 
+    System.out.println ("The largest item is " + myArray.getMax() ); 
 //    System.out.println ("The largest item is at index " + myArray.getMaxIndex());
 
 //    System.out.println ("The smallest item is " + myArray.getMin() );
@@ -121,8 +168,4 @@ public class IntegerArrayTools
     
   }
 }
-    
-    
-  
-  
-         
+   
