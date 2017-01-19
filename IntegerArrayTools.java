@@ -119,9 +119,10 @@ public class IntegerArrayTools
     int max = arrayData[0];
     int index = 0;
    for (int i = 0; i < arrayCount; i++) {
-    if (arrayData[i] > max)
+     if (arrayData[i] > max) {
      max = arrayData[i];
      index = i;
+     }
   }
    return index;
   }
@@ -143,9 +144,10 @@ public class IntegerArrayTools
     int min = arrayData[0];
     int index = 0;
    for (int i = 0; i < arrayCount; i++) {
-    if (arrayData[i] < min)
+     if (arrayData[i] < min) {
      min = arrayData[i];
      index = i;
+     }
   }
    return index;
   }
@@ -153,19 +155,18 @@ public class IntegerArrayTools
   public static void main (String[] args)
   {
     IntegerArrayTools myArray = new IntegerArrayTools();
-    myArray.fillRandom(100, 12);
-    //myArray.fillKeyboard ();
+    //myArray.fillRandom(100, 12);
+    myArray.fillKeyboard ();
     myArray.printArray ();
     System.out.println ("There are " + myArray.getCount() + " integers in the array.");
     System.out.println ("The sum is " + myArray.sumArray());
     
     // Un-comment these lines one at a time after you have written the appropriate code
-    System.out.println ("The largest item is " + myArray.getMax() ); 
-//    System.out.println ("The largest item is at index " + myArray.getMaxIndex());
+    //System.out.println ("The largest item is " + myArray.getMax() ); 
+    //System.out.println ("The largest item is at index " + myArray.getMaxIndex());
 
-//    System.out.println ("The smallest item is " + myArray.getMin() );
-//    System.out.println ("The smallest item is at index " + myArray.getMinIndex());
+    //System.out.println ("The smallest item is " + myArray.getMin() );
+    System.out.println ("The smallest item is at index " + myArray.getMinIndex());
     
   }
 }
-   
