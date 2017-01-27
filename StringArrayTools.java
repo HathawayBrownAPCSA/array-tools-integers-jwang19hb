@@ -128,6 +128,31 @@ public class StringArrayTools
      }
    return index;
   }
+  /** Finds the minimun starting from a certain position
+    * @param start the index from which to start searching for the minimun
+    * @return pos the index of the minimun string startinf from position start
+    **/
+ public int getMinIndex(int start) {
+   String min = arrayData[0];
+   int pos = start;
+   for (int i = 0; i < arrayCount; i++) {
+     if (arrayData[i].compareTo(min) < 0)
+     pos = i;
+     }
+   return pos;
+  }
+  /** Sorts the array in order from least to greatest
+    **/
+ public void sort() {
+   int pos = 0;
+   while (pos < arrayCount-1){
+     int min = getMinIndex(pos);
+     String swap = arrayData[min];
+     arrayData[min] = arrayData[pos];
+     arrayData[pos] = swap; 
+     pos++; 
+   }
+ }
   /** Tests the various array tools */
   public static void main (String[] args)
   {
@@ -143,5 +168,7 @@ public class StringArrayTools
     //System.out.println ("The smallest item is " + myArray.getMin() );
     System.out.println ("The smallest item is at index " + myArray.getMinIndex());
     
+    myArray.sort();
+    myArray.printArray();
   }
 }
