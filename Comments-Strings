@@ -1,0 +1,7 @@
+Great work converting from integers to Strings.  And you even included the sort :-)
+
+There's a little bit of funky indenting in getMax and getMaxIndex and getMin and getMinIndex.
+Doesn't affect the functionality, of course, but it catches the eye, like a misspilld word in a sentence.  
+Something to be conscious of.
+
+Good work - 10/10
